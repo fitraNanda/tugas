@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <script src="./tugasToDo.js" defer></script>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>To Do List</h1>
+    <form>
+      <table>
+        <thead>
+          <th>ID</th>
+          <th>To Do</th>
+          <th>Place</th>
+
+          <th colspan="2">Action</th>
+        </thead>
+        <tbody id="render">
+          <tr>
+            <td>${id}</td>
+            <td>${todo}</td>
+            <td>${place}</td>
+            <td><input type="button" value="Edit" /></td>
+            <td><input type="button" value="Delete" /></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Input Option:</p>
+      <p>
+        <input type="text" id="todoInput" placeholder="To Do" />
+        <input type="text" id="placeInput" placeholder="Place" />
+
+        <input type="button" value="Input" onclick="fnInputData()" />
+      </p>
+    </form>
+  </body>
+</html>
